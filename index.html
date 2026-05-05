@@ -4,7 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Landing Page</title>
-    <link href="responsive.css" rel="stylesheet">
+    <style>
+        /* RESET DASAR */
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+}
+
+/* ================= HEADER ================= */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: olivedrab;
+color: white;
+padding: 15px 20px;
+}
+
+nav ul {
+display: flex;
+gap: 20px;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 30px;
+gap: 20px;
+}
+
+.hero-text {
+flex: 1;
+}
+
+.hero-img {
+flex: 1;
+}
+
+.hero img {
+max-width: 100%;
+border-radius: 10px;
+}
+
+/* ================= GRID ================= */
+.grid {
+display: flex;
+gap: 20px;
+padding: 20px;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+/* ================= CARD ================= */
+.card {
+background-color: #895129;
+color: white;
+flex: 1;
+max-width: 250px;
+padding: 15px;
+border-radius: 10px;
+text-align: center;
+transition: transform 0.2s ease;
+}
+
+.card:hover {
+transform: scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+display: flex;
+justify-content: space-between;
+gap: 20px;
+background-color: olivedrab;
+color: white;
+padding: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 1024px){
+    header {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+    nav ul {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+    </style>
 </head>
 <body>
     <!DOCTYPE html>
